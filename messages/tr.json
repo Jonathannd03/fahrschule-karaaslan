@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "pricing": "Fiyatlar",
+    "contact": "İletişim",
+    "getStarted": "Başla"
+  },
+  "hero": {
+    "title": "Almanya'daki Sürücü Kursu",
+    "subtitle": "Deneyimli ve sabırlı eğitmenlerle profesyonel sürücü eğitimi",
+    "rating": "Değerlendirme",
+    "cta": "Ücretsiz Danışma",
+    "ctaSecondary": "Daha fazla bilgi"
+  },
+  "features": {
+    "title": "Neden Fahrschule Karaaslan?",
+    "subtitle": "Bizimle avantajlarınız",
+    "professional": {
+      "title": "Profesyonel Eğitim",
+      "description": "Modern öğretim yöntemleri ile deneyimli sürücü eğitmenleri"
+    },
+    "patient": {
+      "title": "Sabırlı ve Motive Edici",
+      "description": "Rahat bir atmosferde bireysel destek"
+    },
+    "success": {
+      "title": "Yüksek Başarı Oranı",
+      "description": "Birçok öğrenci ilk denemede başarılı oluyor"
+    },
+    "flexible": {
+      "title": "Esnek Saatler",
+      "description": "Zaman planınıza göre sürüş dersleri"
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Tüm ehliyet sınıfları tek yerde",
+    "classB": {
+      "title": "B Sınıfı Ehliyet",
+      "description": "3,5 tona kadar tüm otomobiller için ehliyet"
+    },
+    "classA": {
+      "title": "A Sınıfı Ehliyet",
+      "description": "Tüm iki tekerlekli araçlar için motosiklet ehliyeti"
+    },
+    "intensive": {
+      "title": "Yoğun Kurslar",
+      "description": "Birkaç hafta içinde hızlı ehliyet"
+    },
+    "theory": {
+      "title": "Teori Dersleri",
+      "description": "Dijital öğretim materyalleri ile modern sınıflar"
+    }
+  },
+  "reviews": {
+    "title": "Öğrencilerimiz Ne Diyor",
+    "subtitle": "299'dan fazla memnun müşteri",
+    "viewAll": "Tüm değerlendirmeler"
+  },
+  "contact": {
+    "title": "İletişime Geç",
+    "subtitle": "Mesajınızı bekliyoruz",
+    "form": {
+      "name": "İsim",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "message": "Mesaj",
+      "submit": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesaj başarıyla gönderildi!",
+      "error": "Gönderilirken hata oluştu. Lütfen tekrar deneyin."
+    },
+    "info": {
+      "address": "Adres",
+      "hours": "Açılış Saatleri",
+      "phone": "Telefon",
+      "email": "E-posta"
+    },
+    "address": "Wanheimer Str. 70, 47053 Duisburg",
+    "phoneNumber": "0203 664152",
+    "hours": {
+      "weekdays": "Pzt-Cum: 11:00 - 18:00",
+      "weekend": "Cmt-Paz: Kapalı"
+    }
+  },
+  "footer": {
+    "description": "Yıllardır profesyonel sürücü eğitimi. Sizi güvenle hedefinize ulaştırıyoruz.",
+    "quickLinks": "Hızlı Linkler",
+    "followUs": "Bizi Takip Edin",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "subtitle": "Güvenilir sürücü kursunuz",
+    "description": "Fahrschule Karaaslan, kaliteli ve içten sürücü eğitimini temsil eder. Deneyimli profesyonel sürücü eğitmenlerinden oluşan ekibimiz, sabır, yetkinlik ve modern yöntemlerle size sürüş öğretir.",
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "Her öğrenciye keyifli ve başarılı bir sürücü eğitimi sağlamak istiyoruz. Adil, şeffaf ve profesyonel."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "quality": "Kalite",
+      "patience": "Sabır",
+      "transparency": "Şeffaflık",
+      "success": "Başarı"
+    }
+  },
+  "pricing": {
+    "title": "Fiyatlarımız",
+    "subtitle": "Şeffaf ve adil fiyatlandırma",
+    "registration": {
+      "title": "Kayıt",
+      "price": "250 €",
+      "description": "Tek seferlik kayıt ücreti"
+    },
+    "lesson": {
+      "title": "Sürüş Dersi",
+      "price": "60 €",
+      "description": "45 dakika başına"
+    },
+    "theory": {
+      "title": "Teori Dersleri",
+      "included": "Dahil",
+      "description": "Kayıt ücretine dahildir"
+    },
+    "included": {
+      "title": "Fiyata Dahil Olanlar",
+      "items": [
+        "Teori dersleri",
+        "Eğitim materyalleri",
+        "TÜV kaydı",
+        "Sınava sunulma"
+      ]
+    },
+    "classB": "B Sınıfı Ehliyet",
+    "note": "Tüm fiyatlar KDV dahildir."
+  }
+}

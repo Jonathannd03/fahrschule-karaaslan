@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "getStarted": "Jetzt starten"
+  },
+  "hero": {
+    "title": "Deine Fahrschule in Deutschland",
+    "subtitle": "Professionelle Fahrausbildung mit erfahrenen und geduldigen Fahrlehrern",
+    "rating": "Bewertungen",
+    "cta": "Kostenlose Beratung",
+    "ctaSecondary": "Mehr erfahren"
+  },
+  "features": {
+    "title": "Warum Fahrschule Karaaslan?",
+    "subtitle": "Deine Vorteile bei uns",
+    "professional": {
+      "title": "Professionelle Ausbildung",
+      "description": "Erfahrene Fahrlehrer mit modernsten Lehrmethoden"
+    },
+    "patient": {
+      "title": "Geduldig & Motivierend",
+      "description": "Individuelle Betreuung in entspannter Atmosphäre"
+    },
+    "success": {
+      "title": "Hohe Erfolgsquote",
+      "description": "Viele Schüler bestehen beim ersten Versuch"
+    },
+    "flexible": {
+      "title": "Flexible Zeiten",
+      "description": "Fahrstunden nach deinem Zeitplan"
+    }
+  },
+  "services": {
+    "title": "Unsere Leistungen",
+    "subtitle": "Alle Führerscheinklassen an einem Ort",
+    "classB": {
+      "title": "Führerschein Klasse B",
+      "description": "PKW-Führerschein für alle Kraftfahrzeuge bis 3,5t"
+    },
+    "classA": {
+      "title": "Führerschein Klasse A",
+      "description": "Motorradführerschein für alle Zweiräder"
+    },
+    "intensive": {
+      "title": "Intensivkurse",
+      "description": "Schneller zum Führerschein in wenigen Wochen"
+    },
+    "theory": {
+      "title": "Theorieunterricht",
+      "description": "Moderne Unterrichtsräume mit digitalen Lehrmitteln"
+    }
+  },
+  "reviews": {
+    "title": "Das sagen unsere Fahrschüler",
+    "subtitle": "Über 299 zufriedene Kunden",
+    "viewAll": "Alle Bewertungen"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Wir freuen uns auf deine Nachricht",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Fehler beim Senden. Bitte versuche es erneut."
+    },
+    "info": {
+      "address": "Adresse",
+      "hours": "Öffnungszeiten",
+      "phone": "Telefon",
+      "email": "E-Mail"
+    },
+    "address": "Wanheimer Str. 70, 47053 Duisburg",
+    "phoneNumber": "0203 664152",
+    "hours": {
+      "weekdays": "Mo-Fr: 11:00 - 18:00",
+      "weekend": "Sa-So: Geschlossen"
+    }
+  },
+  "footer": {
+    "description": "Professionelle Fahrausbildung seit vielen Jahren. Wir bringen dich sicher ans Ziel.",
+    "quickLinks": "Schnelllinks",
+    "followUs": "Folge uns",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Deine zuverlässige Fahrschule",
+    "description": "Fahrschule Karaaslan steht für qualitativ hochwertige Fahrausbildung mit Herz. Unser erfahrenes Team aus professionellen Fahrlehrern bringt dir das Fahren bei – mit Geduld, Kompetenz und modernsten Methoden.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Wir möchten jedem Fahrschüler eine angenehme und erfolgreiche Fahrausbildung ermöglichen. Fair, transparent und professionell."
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "quality": "Qualität",
+      "patience": "Geduld",
+      "transparency": "Transparenz",
+      "success": "Erfolg"
+    }
+  },
+  "pricing": {
+    "title": "Unsere Preise",
+    "subtitle": "Transparente und faire Preisgestaltung",
+    "registration": {
+      "title": "Anmeldung",
+      "price": "250 €",
+      "description": "Einmalige Anmeldegebühr"
+    },
+    "lesson": {
+      "title": "Fahrstunde",
+      "price": "60 €",
+      "description": "Pro 45 Minuten"
+    },
+    "theory": {
+      "title": "Theorieunterricht",
+      "included": "Inklusive",
+      "description": "Im Anmeldepreis enthalten"
+    },
+    "included": {
+      "title": "Im Preis enthalten",
+      "items": [
+        "Theorieunterricht",
+        "Lehrmaterial",
+        "TÜV-Anmeldung",
+        "Vorstellung zur Prüfung"
+      ]
+    },
+    "classB": "Führerschein Klasse B",
+    "note": "Alle Preise verstehen sich inkl. MwSt."
+  }
+}
