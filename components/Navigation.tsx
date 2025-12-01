@@ -135,17 +135,61 @@ export default function Navigation() {
             </Link>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="w-6 h-6 text-gray-900" />
-            ) : (
-              <Menu className="w-6 h-6 text-gray-900" />
-            )}
-          </button>
+          <div className="flex md:hidden items-center space-x-2">
+            {/* Mobile Language Switcher in Header */}
+            <div className="relative" ref={langRef}>
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center space-x-1 px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200"
+                aria-label="Change language"
+              >
+                <span className="text-lg">{currentLanguage.flag}</span>
+                <ChevronDown className={`w-3 h-3 text-gray-600 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Mobile Language Dropdown */}
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        changeLocale(lang.code);
+                        setIsLangOpen(false);
+                      }}
+                      className={`w-full flex items-center justify-between px-4 py-2 hover:bg-gray-50 transition-colors ${
+                        locale === lang.code ? 'bg-primary-50' : ''
+                      }`}
+                    >
+                      <div className="flex items-center space-x-2">
+                        <span className="text-base">{lang.flag}</span>
+                        <span className={`text-xs font-medium ${
+                          locale === lang.code ? 'text-primary-600' : 'text-gray-700'
+                        }`}>
+                          {lang.name}
+                        </span>
+                      </div>
+                      {locale === lang.code && (
+                        <Check className="w-3 h-3 text-primary-600" />
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6 text-gray-900" />
+              ) : (
+                <Menu className="w-6 h-6 text-gray-900" />
+              )}
+            </button>
+          </div>
         </div>
 
         {isOpen && (
@@ -161,42 +205,6 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-
-              {/* Mobile Language Switcher */}
-              <div className="px-2 py-4 border-t border-gray-100">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-xs font-bold text-gray-600 uppercase tracking-wider">
-                    {locale === 'de' ? 'Sprache' : locale === 'en' ? 'Language' : 'Dil'}
-                  </div>
-                  <Globe className="w-4 h-4 text-gray-400" />
-                </div>
-                <div className="grid grid-cols-3 gap-2">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        changeLocale(lang.code);
-                        setIsOpen(false);
-                      }}
-                      className={`flex flex-col items-center justify-center py-3 px-2 rounded-xl transition-all duration-200 ${
-                        locale === lang.code
-                          ? 'bg-gradient-gold text-white shadow-lg scale-105'
-                          : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
-                      }`}
-                    >
-                      <span className="text-2xl mb-1">{lang.flag}</span>
-                      <span className={`text-xs font-semibold ${
-                        locale === lang.code ? 'text-white' : 'text-gray-600'
-                      }`}>
-                        {lang.name}
-                      </span>
-                      {locale === lang.code && (
-                        <Check className="w-3 h-3 mt-1 text-white" />
-                      )}
-                    </button>
-                  ))}
-                </div>
-              </div>
 
               <Link
                 href={`/${locale}/contact`}
