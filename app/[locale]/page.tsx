@@ -83,10 +83,10 @@ export default async function Home() {
       <HeroSection
         locale={locale}
         translations={{
-          rating: t('hero.rating'),
-          subtitle: t('hero.subtitle'),
-          cta: t('hero.cta'),
-          ctaSecondary: t('hero.ctaSecondary'),
+          rating: t("hero.rating"),
+          subtitle: t("hero.subtitle"),
+          cta: t("hero.cta"),
+          ctaSecondary: t("hero.ctaSecondary"),
         }}
       />
 
@@ -95,9 +95,11 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {t('features.title')}
+              {t("features.title")}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('features.subtitle')}</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t("features.subtitle")}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -129,9 +131,9 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {t('services.title')}
+              {t("services.title")}
             </h2>
-            <p className="text-xl text-gray-600">{t('services.subtitle')}</p>
+            <p className="text-xl text-gray-600">{t("services.subtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -161,12 +163,12 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {locale === 'de' ? 'Unsere Galerie' : 'Galerimiz'}
+              {locale === "de" ? "Unsere Galerie" : "Galerimiz"}
             </h2>
             <p className="text-xl text-gray-600">
-              {locale === 'de'
-                ? 'Einblicke in unsere Fahrschule'
-                : 'Sürücü kursumuza göz atın'}
+              {locale === "de"
+                ? "Einblicke in unsere Fahrschule"
+                : "Sürücü kursumuza göz atın"}
             </p>
           </div>
           <Gallery />
@@ -178,9 +180,9 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {t('reviews.title')}
+              {t("reviews.title")}
             </h2>
-            <p className="text-xl text-gray-600">{t('reviews.subtitle')}</p>
+            <p className="text-xl text-gray-600">{t("reviews.subtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -198,12 +200,15 @@ export default async function Home() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  "{review.text}"
+                  {review.text}
                 </p>
                 <div className="border-t border-primary-200 pt-6">
-                  <p className="font-bold text-gray-900 text-lg">{review.name}</p>
+                  <p className="font-bold text-gray-900 text-lg">
+                    ´{review.name}´
+                  </p>
                   <p className="text-sm text-primary-700 font-medium mt-1">
-                    {locale === 'de' ? 'Fahrlehrer' : 'Eğitmen'}: {review.instructor}
+                    {locale === "de" ? "Fahrlehrer" : "Eğitmen"}:{" "}
+                    {review.instructor}
                   </p>
                 </div>
               </div>
@@ -217,20 +222,20 @@ export default async function Home() {
         <div className="absolute inset-0 bg-[url('/images/gallery-2.jpg')] opacity-5 bg-cover bg-center"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            {locale === 'de'
-              ? 'Bereit, deinen Führerschein zu machen?'
-              : 'Ehliyetinizi almaya hazır mısınız?'}
+            {locale === "de"
+              ? "Bereit, deinen Führerschein zu machen?"
+              : "Ehliyetinizi almaya hazır mısınız?"}
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            {locale === 'de'
-              ? 'Vereinbare jetzt ein kostenloses Beratungsgespräch und starte deine Fahrausbildung.'
-              : 'Şimdi ücretsiz bir danışma görüşmesi ayarlayın ve sürücü eğitiminize başlayın.'}
+            {locale === "de"
+              ? "Vereinbare jetzt ein kostenloses Beratungsgespräch und starte deine Fahrausbildung."
+              : "Şimdi ücretsiz bir danışma görüşmesi ayarlayın ve sürücü eğitiminize başlayın."}
           </p>
           <Link
             href={`/${locale}/contact`}
             className="group inline-flex items-center justify-center px-10 py-6 bg-gradient-gold text-white font-bold rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg"
           >
-            {t('hero.cta')}
+            {t("hero.cta")}
             <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
