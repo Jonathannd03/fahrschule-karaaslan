@@ -141,7 +141,9 @@ export default async function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               {t("services.title")}
             </h2>
-            <p className="text-base sm:text-xl text-gray-600">{t("services.subtitle")}</p>
+            <p className="text-base sm:text-xl text-gray-600">
+              {t("services.subtitle")}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -171,7 +173,11 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-              {locale === "de" ? "Unsere Galerie" : locale === "en" ? "Our Gallery" : "Galerimiz"}
+              {locale === "de"
+                ? "Unsere Galerie"
+                : locale === "en"
+                ? "Our Gallery"
+                : "Galerimiz"}
             </h2>
             <p className="text-base sm:text-xl text-gray-600">
               {locale === "de"
@@ -192,7 +198,9 @@ export default async function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               {t("reviews.title")}
             </h2>
-            <p className="text-base sm:text-xl text-gray-600">{t("reviews.subtitle")}</p>
+            <p className="text-base sm:text-xl text-gray-600">
+              {t("reviews.subtitle")}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
@@ -210,15 +218,19 @@ export default async function Home() {
                   ))}
                 </div>
                 <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-                  "{review.text}"
+                  `{review.text}`
                 </p>
                 <div className="border-t border-primary-200 pt-4 sm:pt-6">
                   <p className="font-bold text-gray-900 text-base sm:text-lg">
                     {review.name}
                   </p>
                   <p className="text-xs sm:text-sm text-primary-700 font-medium mt-1">
-                    {locale === "de" ? "Fahrlehrer" : locale === "en" ? "Instructor" : "Eğitmen"}:{" "}
-                    {review.instructor}
+                    {locale === "de"
+                      ? "Fahrlehrer"
+                      : locale === "en"
+                      ? "Instructor"
+                      : "Eğitmen"}
+                    : {review.instructor}
                   </p>
                 </div>
               </div>
