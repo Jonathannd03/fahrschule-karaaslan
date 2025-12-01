@@ -12,11 +12,11 @@ export default async function ServicesPage() {
       title: t('services.classB.title'),
       description: t('services.classB.description'),
       features: [
-        locale === 'de' ? 'Theorieunterricht' : 'Teori dersleri',
-        locale === 'de' ? 'Praktische Fahrstunden' : 'Pratik sürüş dersleri',
-        locale === 'de' ? 'Prüfungsvorbereitung' : 'Sınav hazırlığı',
-        locale === 'de' ? 'Moderne Fahrzeuge' : 'Modern araçlar',
-        locale === 'de' ? 'Erfahrene Fahrlehrer' : 'Deneyimli eğitmenler',
+        locale === 'de' ? 'Theorieunterricht' : locale === 'en' ? 'Theory classes' : 'Teori dersleri',
+        locale === 'de' ? 'Praktische Fahrstunden' : locale === 'en' ? 'Practical driving lessons' : 'Pratik sürüş dersleri',
+        locale === 'de' ? 'Prüfungsvorbereitung' : locale === 'en' ? 'Exam preparation' : 'Sınav hazırlığı',
+        locale === 'de' ? 'Moderne Fahrzeuge' : locale === 'en' ? 'Modern vehicles' : 'Modern araçlar',
+        locale === 'de' ? 'Erfahrene Fahrlehrer' : locale === 'en' ? 'Experienced instructors' : 'Deneyimli eğitmenler',
       ],
       color: 'from-primary-500 to-primary-600',
     },
@@ -25,10 +25,10 @@ export default async function ServicesPage() {
       title: t('services.theory.title'),
       description: t('services.theory.description'),
       features: [
-        locale === 'de' ? 'Digitale Lernmittel' : 'Dijital öğrenme araçları',
-        locale === 'de' ? 'Interaktiver Unterricht' : 'Etkileşimli ders',
-        locale === 'de' ? 'Prüfungssimulation' : 'Sınav simülasyonu',
-        locale === 'de' ? 'Deutsch & Türkisch' : 'Almanca ve Türkçe',
+        locale === 'de' ? 'Digitale Lernmittel' : locale === 'en' ? 'Digital learning tools' : 'Dijital öğrenme araçları',
+        locale === 'de' ? 'Interaktiver Unterricht' : locale === 'en' ? 'Interactive lessons' : 'Etkileşimli ders',
+        locale === 'de' ? 'Prüfungssimulation' : locale === 'en' ? 'Exam simulation' : 'Sınav simülasyonu',
+        locale === 'de' ? 'Deutsch & Türkisch' : locale === 'en' ? 'German & Turkish' : 'Almanca ve Türkçe',
       ],
       color: 'from-blue-500 to-blue-600',
     },
@@ -37,26 +37,32 @@ export default async function ServicesPage() {
   const highlights = [
     {
       icon: GraduationCap,
-      title: locale === 'de' ? 'Professionelle Ausbildung' : 'Profesyonel Eğitim',
+      title: locale === 'de' ? 'Professionelle Ausbildung' : locale === 'en' ? 'Professional Training' : 'Profesyonel Eğitim',
       description:
         locale === 'de'
           ? 'Qualifizierte Fahrlehrer mit langjähriger Erfahrung'
+          : locale === 'en'
+          ? 'Qualified instructors with many years of experience'
           : 'Uzun yıllara dayanan deneyime sahip kalifiye eğitmenler',
     },
     {
       icon: Trophy,
-      title: locale === 'de' ? 'Hohe Erfolgsquote' : 'Yüksek Başarı Oranı',
+      title: locale === 'de' ? 'Hohe Erfolgsquote' : locale === 'en' ? 'High Success Rate' : 'Yüksek Başarı Oranı',
       description:
         locale === 'de'
           ? '95% unserer Schüler bestehen beim ersten Versuch'
+          : locale === 'en'
+          ? '95% of our students pass on their first attempt'
           : 'Öğrencilerimizin %95\'i ilk denemede geçiyor',
     },
     {
       icon: Car,
-      title: locale === 'de' ? 'Moderne Fahrzeuge' : 'Modern Araçlar',
+      title: locale === 'de' ? 'Moderne Fahrzeuge' : locale === 'en' ? 'Modern Vehicles' : 'Modern Araçlar',
       description:
         locale === 'de'
           ? 'Gut gewartete Fahrzeuge mit neuester Sicherheitstechnik'
+          : locale === 'en'
+          ? 'Well-maintained vehicles with the latest safety technology'
           : 'En son güvenlik teknolojisine sahip iyi bakımlı araçlar',
     },
   ];
@@ -83,7 +89,7 @@ export default async function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-gold rounded-full text-white font-bold text-xl shadow-lg">
             <Car className="w-7 h-7 mr-3" />
-            {locale === 'de' ? 'Wir bieten Führerschein Klasse B' : 'B Sınıfı Ehliyet Sunuyoruz'}
+            {locale === 'de' ? 'Wir bieten Führerschein Klasse B' : locale === 'en' ? 'We Offer Class B Driver\'s License' : 'B Sınıfı Ehliyet Sunuyoruz'}
           </div>
         </div>
       </section>
@@ -137,6 +143,8 @@ export default async function ServicesPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {locale === 'de'
                 ? 'Warum Fahrschule Karaaslan?'
+                : locale === 'en'
+                ? 'Why Fahrschule Karaaslan?'
                 : 'Neden Fahrschule Karaaslan?'}
             </h2>
           </div>
@@ -172,11 +180,15 @@ export default async function ServicesPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {locale === 'de'
                 ? 'Wie läuft die Ausbildung ab?'
+                : locale === 'en'
+                ? 'How does the training work?'
                 : 'Eğitim nasıl ilerler?'}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {locale === 'de'
                 ? 'Dein Weg zum Führerschein in einfachen Schritten'
+                : locale === 'en'
+                ? 'Your path to a driver\'s license in simple steps'
                 : 'Ehliyetinize giden yolda basit adımlar'}
             </p>
           </div>
@@ -185,30 +197,38 @@ export default async function ServicesPage() {
             {[
               {
                 step: '1',
-                title: locale === 'de' ? 'Anmeldung' : 'Kayıt',
+                title: locale === 'de' ? 'Anmeldung' : locale === 'en' ? 'Registration' : 'Kayıt',
                 desc: locale === 'de'
                   ? 'Kostenlose Beratung und Anmeldung'
+                  : locale === 'en'
+                  ? 'Free consultation and registration'
                   : 'Ücretsiz danışma ve kayıt',
               },
               {
                 step: '2',
-                title: locale === 'de' ? 'Theorie' : 'Teori',
+                title: locale === 'de' ? 'Theorie' : locale === 'en' ? 'Theory' : 'Teori',
                 desc: locale === 'de'
                   ? 'Theorieunterricht und Prüfung'
+                  : locale === 'en'
+                  ? 'Theory classes and exam'
                   : 'Teori dersleri ve sınav',
               },
               {
                 step: '3',
-                title: locale === 'de' ? 'Praxis' : 'Pratik',
+                title: locale === 'de' ? 'Praxis' : locale === 'en' ? 'Practice' : 'Pratik',
                 desc: locale === 'de'
                   ? 'Fahrstunden mit erfahrenen Lehrern'
+                  : locale === 'en'
+                  ? 'Driving lessons with experienced instructors'
                   : 'Deneyimli eğitmenlerle sürüş dersleri',
               },
               {
                 step: '4',
-                title: locale === 'de' ? 'Prüfung' : 'Sınav',
+                title: locale === 'de' ? 'Prüfung' : locale === 'en' ? 'Exam' : 'Sınav',
                 desc: locale === 'de'
                   ? 'Praktische Prüfung und Führerschein'
+                  : locale === 'en'
+                  ? 'Practical exam and driver\'s license'
                   : 'Pratik sınav ve ehliyet',
               },
             ].map((item, index) => (
@@ -231,11 +251,15 @@ export default async function ServicesPage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             {locale === 'de'
               ? 'Bereit anzufangen?'
+              : locale === 'en'
+              ? 'Ready to get started?'
               : 'Başlamaya hazır mısınız?'}
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
             {locale === 'de'
               ? 'Kontaktiere uns für eine kostenlose Beratung und starte deine Fahrausbildung.'
+              : locale === 'en'
+              ? 'Contact us for a free consultation and start your driver training.'
               : 'Ücretsiz danışma için bizimle iletişime geçin ve sürücü eğitiminize başlayın.'}
           </p>
           <Link

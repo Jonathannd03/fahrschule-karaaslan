@@ -32,6 +32,8 @@ export default async function ContactPage() {
       content:
         locale === 'de'
           ? 'Mo-Fr: 11:00 - 18:00\nSa-So: Geschlossen'
+          : locale === 'en'
+          ? 'Mon-Fri: 11:00 - 18:00\nSat-Sun: Closed'
           : 'Pzt-Cum: 11:00 - 18:00\nCmt-Paz: Kapalı',
     },
   ];
@@ -61,7 +63,7 @@ export default async function ContactPage() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                  {locale === 'de' ? 'Kontaktinformationen' : 'İletişim Bilgileri'}
+                  {locale === 'de' ? 'Kontaktinformationen' : locale === 'en' ? 'Contact Information' : 'İletişim Bilgileri'}
                 </h2>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => {
@@ -102,7 +104,7 @@ export default async function ContactPage() {
               {/* Map */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  {locale === 'de' ? 'Wo Sie uns finden' : 'Bizi Nerede Bulabilirsiniz'}
+                  {locale === 'de' ? 'Wo Sie uns finden' : locale === 'en' ? 'Where to Find Us' : 'Bizi Nerede Bulabilirsiniz'}
                 </h2>
                 <GoogleMap />
               </div>
@@ -112,7 +114,7 @@ export default async function ContactPage() {
             <div className="lg:sticky lg:top-24 h-fit">
               <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                  {locale === 'de' ? 'Nachricht senden' : 'Mesaj Gönder'}
+                  {locale === 'de' ? 'Nachricht senden' : locale === 'en' ? 'Send Message' : 'Mesaj Gönder'}
                 </h2>
                 <ContactForm />
               </div>
@@ -131,21 +133,25 @@ export default async function ContactPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               {locale === 'de'
                 ? 'Besuche uns direkt vor Ort'
+                : locale === 'en'
+                ? 'Visit us on site'
                 : 'Bizi yerinde ziyaret edin'}
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               {locale === 'de'
                 ? 'Du kannst gerne ohne Termin vorbeikommen oder einen Termin vereinbaren, um sicherzustellen, dass wir Zeit für dich haben.'
+                : locale === 'en'
+                ? 'You are welcome to drop by without an appointment, or schedule one to ensure we have time for you.'
                 : 'Randevusuz gelebilir veya sizin için zamanımız olduğundan emin olmak için bir randevu alabilirsiniz.'}
             </p>
             <div className="inline-flex items-center space-x-4 bg-white px-8 py-4 rounded-xl shadow-md">
               <Clock className="w-6 h-6 text-primary-600" />
               <div className="text-left">
                 <p className="font-bold text-gray-900">
-                  {locale === 'de' ? 'Mo-Fr: 11:00 - 18:00' : 'Pzt-Cum: 11:00 - 18:00'}
+                  {locale === 'de' ? 'Mo-Fr: 11:00 - 18:00' : locale === 'en' ? 'Mon-Fri: 11:00 - 18:00' : 'Pzt-Cum: 11:00 - 18:00'}
                 </p>
                 <p className="text-sm text-gray-600">
-                  {locale === 'de' ? 'Sa-So: Geschlossen' : 'Cmt-Paz: Kapalı'}
+                  {locale === 'de' ? 'Sa-So: Geschlossen' : locale === 'en' ? 'Sat-Sun: Closed' : 'Cmt-Paz: Kapalı'}
                 </p>
               </div>
             </div>

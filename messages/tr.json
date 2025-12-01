@@ -9,6 +9,8 @@
   },
   "hero": {
     "title": "Almanya'daki Sürücü Kursu",
+    "headline1": "Ehliyetinize",
+    "headline2": "Giden Yol",
     "subtitle": "Deneyimli ve sabırlı eğitmenlerle profesyonel sürücü eğitimi",
     "rating": "Değerlendirme",
     "cta": "Ücretsiz Danışma",
@@ -56,7 +58,7 @@
   },
   "reviews": {
     "title": "Öğrencilerimiz Ne Diyor",
-    "subtitle": "299'dan fazla memnun müşteri",
+    "subtitle": "2000'den fazla eğitimli öğrenciden 299 değerlendirme",
     "viewAll": "Tüm değerlendirmeler"
   },
   "contact": {

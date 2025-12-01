@@ -24,10 +24,10 @@ export default async function PricingPage() {
   ];
 
   const included = [
-    locale === 'de' ? 'Theorieunterricht' : 'Teori dersleri',
-    locale === 'de' ? 'Lehrmaterial' : 'Eğitim materyalleri',
-    locale === 'de' ? 'TÜV-Anmeldung' : 'TÜV kaydı',
-    locale === 'de' ? 'Vorstellung zur Prüfung' : 'Sınava sunulma',
+    locale === 'de' ? 'Theorieunterricht' : locale === 'en' ? 'Theory classes' : 'Teori dersleri',
+    locale === 'de' ? 'Lehrmaterial' : locale === 'en' ? 'Learning materials' : 'Eğitim materyalleri',
+    locale === 'de' ? 'TÜV-Anmeldung' : locale === 'en' ? 'TÜV registration' : 'TÜV kaydı',
+    locale === 'de' ? 'Vorstellung zur Prüfung' : locale === 'en' ? 'Exam presentation' : 'Sınava sunulma',
   ];
 
   return (
@@ -58,6 +58,8 @@ export default async function PricingPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {locale === 'de'
                 ? 'Transparente Preisgestaltung'
+                : locale === 'en'
+                ? 'Transparent Pricing'
                 : 'Şeffaf Fiyatlandırma'}
             </h2>
           </div>
@@ -109,6 +111,8 @@ export default async function PricingPage() {
                 <p className="text-lg text-gray-600">
                   {locale === 'de'
                     ? 'Folgendes ist im Anmeldepreis bereits enthalten:'
+                    : locale === 'en'
+                    ? 'The following is already included in the registration fee:'
                     : 'Kayıt ücretine aşağıdakiler dahildir:'}
                 </p>
               </div>
@@ -135,11 +139,13 @@ export default async function PricingPage() {
                 <Euro className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {locale === 'de' ? 'Faire Preise' : 'Adil Fiyatlar'}
+                {locale === 'de' ? 'Faire Preise' : locale === 'en' ? 'Fair Prices' : 'Adil Fiyatlar'}
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 {locale === 'de'
                   ? 'Keine versteckten Kosten. Transparente Preisgestaltung von Anfang an.'
+                  : locale === 'en'
+                  ? 'No hidden costs. Transparent pricing from the start.'
                   : 'Gizli maliyet yok. Başından itibaren şeffaf fiyatlandırma.'}
               </p>
             </div>
@@ -149,11 +155,13 @@ export default async function PricingPage() {
                 <BookOpen className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {locale === 'de' ? 'Flexible Zahlung' : 'Esnek Ödeme'}
+                {locale === 'de' ? 'Flexible Zahlung' : locale === 'en' ? 'Flexible Payment' : 'Esnek Ödeme'}
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 {locale === 'de'
                   ? 'Bezahle deine Fahrstunden einzeln. Keine großen Vorauszahlungen nötig.'
+                  : locale === 'en'
+                  ? 'Pay for your driving lessons individually. No large advance payments required.'
                   : 'Sürüş derslerinizi tek tek ödeyin. Büyük ön ödeme gerekmez.'}
               </p>
             </div>
@@ -163,11 +171,13 @@ export default async function PricingPage() {
                 <CheckCircle className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {locale === 'de' ? 'Alles Inklusive' : 'Her Şey Dahil'}
+                {locale === 'de' ? 'Alles Inklusive' : locale === 'en' ? 'All Inclusive' : 'Her Şey Dahil'}
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 {locale === 'de'
                   ? 'Theorie, Material und TÜV-Anmeldung sind bereits im Preis enthalten.'
+                  : locale === 'en'
+                  ? 'Theory, materials, and TÜV registration are already included in the price.'
                   : 'Teori, materyal ve TÜV kaydı fiyata dahildir.'}
               </p>
             </div>
@@ -178,14 +188,40 @@ export default async function PricingPage() {
       {/* Pricing Note */}
       <section className="py-16 bg-gradient-to-br from-primary-50 to-white border-y border-primary-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg text-gray-600 mb-4">
-            {t('pricing.note')}
-          </p>
-          <p className="text-gray-500">
-            {locale === 'de'
-              ? 'Die durchschnittlichen Gesamtkosten für den Führerschein Klasse B liegen bei ca. 2.000-2.500€, abhängig von der Anzahl der benötigten Fahrstunden.'
-              : 'B sınıfı ehliyet için ortalama toplam maliyet, gereken sürüş dersi sayısına bağlı olarak yaklaşık 2.000-2.500€ arasındadır.'}
-          </p>
+          <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-primary-200">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-4">
+              <CheckCircle className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              {locale === 'de' ? 'Grundpreise' : locale === 'en' ? 'Base Prices' : 'Temel Fiyatlar'}
+            </h3>
+            <p className="text-lg text-gray-600 mb-4">
+              {t('pricing.note')}
+            </p>
+            <p className="text-gray-700 mb-6 leading-relaxed">
+              {locale === 'de'
+                ? 'Die hier angezeigten Preise sind Grundpreise. Die Gesamtkosten können je nach individuellen Bedürfnissen variieren (z.B. zusätzliche Fahrstunden, Prüfungsgebühren, Lernmaterialien).'
+                : locale === 'en'
+                ? 'The prices shown here are base prices. Total costs may vary depending on individual needs (e.g. additional driving lessons, exam fees, learning materials).'
+                : 'Burada gösterilen fiyatlar temel fiyatlardır. Toplam maliyetler bireysel ihtiyaçlara göre değişebilir (örn. ek sürüş dersleri, sınav ücretleri, öğrenim materyalleri).'}
+            </p>
+            <div className="bg-primary-50 rounded-xl p-6 mb-4">
+              <p className="text-gray-700 font-medium">
+                {locale === 'de'
+                  ? '💡 Für eine vollständige Preisübersicht und individuelle Beratung kontaktieren Sie uns bitte.'
+                  : locale === 'en'
+                  ? '💡 For a complete price overview and individual consultation, please contact us.'
+                  : '💡 Tam fiyat bilgisi ve kişisel danışma için lütfen bizimle iletişime geçin.'}
+              </p>
+            </div>
+            <p className="text-sm text-gray-500 italic">
+              {locale === 'de'
+                ? 'Die durchschnittlichen Gesamtkosten für den Führerschein Klasse B liegen bei ca. 2.000-2.500€, abhängig von der Anzahl der benötigten Fahrstunden.'
+                : locale === 'en'
+                ? 'The average total cost for a Class B driver\'s license is approximately 2,000-2,500€, depending on the number of driving lessons required.'
+                : 'B sınıfı ehliyet için ortalama toplam maliyet, gereken sürüş dersi sayısına bağlı olarak yaklaşık 2.000-2.500€ arasındadır.'}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -195,19 +231,23 @@ export default async function PricingPage() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             {locale === 'de'
-              ? 'Bereit anzufangen?'
-              : 'Başlamaya hazır mısınız?'}
+              ? 'Vollständige Preisübersicht gewünscht?'
+              : locale === 'en'
+              ? 'Want a complete price overview?'
+              : 'Tam fiyat listesini mi istiyorsunuz?'}
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
             {locale === 'de'
-              ? 'Kontaktiere uns für eine kostenlose Beratung und starte deine Fahrausbildung noch heute.'
-              : 'Ücretsiz danışma için bizimle iletişime geçin ve bugün sürücü eğitiminize başlayın.'}
+              ? 'Kontaktiere uns für eine detaillierte Preisübersicht und kostenlose Beratung. Wir erstellen dir ein individuelles Angebot.'
+              : locale === 'en'
+              ? 'Contact us for a detailed price overview and free consultation. We will create a personalized offer for you.'
+              : 'Detaylı fiyat listesi ve ücretsiz danışma için bizimle iletişime geçin. Size özel bir teklif hazırlayalım.'}
           </p>
           <Link
             href={`/${locale}/contact`}
             className="group inline-flex items-center justify-center px-10 py-6 bg-gradient-gold text-white font-bold rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg"
           >
-            {locale === 'de' ? 'Jetzt Kontakt aufnehmen' : 'Şimdi İletişime Geçin'}
+            {locale === 'de' ? 'Jetzt Beratung anfordern' : locale === 'en' ? 'Request Consultation Now' : 'Şimdi Danışma İsteyin'}
             <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

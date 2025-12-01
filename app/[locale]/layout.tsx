@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
   title: 'Fahrschule Karaaslan - Professionelle Fahrausbildung',
-  description: 'Professionelle Fahrausbildung mit erfahrenen und geduldigen Fahrlehrern. 4,7 Sterne Bewertung mit über 299 zufriedenen Kunden.',
+  description: 'Professionelle Fahrausbildung mit erfahrenen und geduldigen Fahrlehrern. 4,7 Sterne Bewertung aus 299 Reviews. Über 2000 erfolgreich ausgebildete Schüler.',
 };
 
 export default async function LocaleLayout({

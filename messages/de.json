@@ -9,6 +9,8 @@
   },
   "hero": {
     "title": "Deine Fahrschule in Deutschland",
+    "headline1": "Dein Weg zum",
+    "headline2": "Führerschein",
     "subtitle": "Professionelle Fahrausbildung mit erfahrenen und geduldigen Fahrlehrern",
     "rating": "Bewertungen",
     "cta": "Kostenlose Beratung",
@@ -56,7 +58,7 @@
   },
   "reviews": {
     "title": "Das sagen unsere Fahrschüler",
-    "subtitle": "Über 299 zufriedene Kunden",
+    "subtitle": "299 Bewertungen von über 2000 ausgebildeten Schülern",
     "viewAll": "Alle Bewertungen"
   },
   "contact": {

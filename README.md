@@ -125,7 +125,7 @@ The site can be deployed to any platform that supports Next.js:
 
 ## Rating & Reviews
 
-Current rating: **4.7/5** from 299 reviews
+Current rating: **4.7/5** from 299 reviews (2000+ trained students)
 
 ## Support
 

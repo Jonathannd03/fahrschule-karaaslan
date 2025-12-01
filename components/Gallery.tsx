@@ -87,11 +87,11 @@ export default function Gallery() {
   return (
     <>
       {/* Gallery Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {images.map((image, index) => (
           <div
             key={index}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500"
+            className="group relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 active:scale-95"
             onClick={() => openModal(index)}
             style={{
               animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
@@ -134,42 +134,42 @@ export default function Gallery() {
       {/* Lightbox Modal */}
       {selectedImage !== null && (
         <div
-          className={`fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-opacity duration-300 ${
+          className={`fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4 transition-opacity duration-300 ${
             isAnimating ? 'opacity-0' : 'opacity-100'
           }`}
           onClick={closeModal}
         >
           {/* Close Button */}
           <button
-            className="absolute top-6 right-6 z-10 w-12 h-12 bg-white/10 hover:bg-gradient-gold rounded-full flex items-center justify-center text-white transition-all duration-300 hover:rotate-90 hover:scale-110 group"
+            className="absolute top-3 right-3 sm:top-6 sm:right-6 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-gradient-gold active:bg-gradient-gold rounded-full flex items-center justify-center text-white transition-all duration-300 hover:rotate-90 hover:scale-110 active:scale-95 group"
             onClick={closeModal}
             aria-label="Close gallery"
           >
-            <X className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
           </button>
 
           {/* Previous Button */}
           <button
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/10 hover:bg-gradient-gold rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:-translate-x-1"
+            className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-gradient-gold active:bg-gradient-gold rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 hover:-translate-x-1"
             onClick={(e) => {
               e.stopPropagation();
               navigateImage('prev');
             }}
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Next Button */}
           <button
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/10 hover:bg-gradient-gold rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:translate-x-1"
+            className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-gradient-gold active:bg-gradient-gold rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 hover:translate-x-1"
             onClick={(e) => {
               e.stopPropagation();
               navigateImage('next');
             }}
             aria-label="Next image"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Image Container */}
@@ -187,15 +187,15 @@ export default function Gallery() {
             />
 
             {/* Image Counter */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-6 px-6 py-3 bg-gradient-gold rounded-full shadow-2xl">
-              <p className="text-white font-semibold text-sm">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-4 sm:mb-6 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-gold rounded-full shadow-2xl">
+              <p className="text-white font-semibold text-xs sm:text-sm">
                 {selectedImage + 1} / {images.length}
               </p>
             </div>
           </div>
 
           {/* Thumbnails Navigation */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
+          <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -203,10 +203,10 @@ export default function Gallery() {
                   e.stopPropagation();
                   setSelectedImage(index);
                 }}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
                   index === selectedImage
-                    ? 'w-8 bg-gradient-to-r from-primary-400 to-primary-600'
-                    : 'w-2 bg-white/40 hover:bg-white/60'
+                    ? 'w-6 sm:w-8 bg-gradient-to-r from-primary-400 to-primary-600'
+                    : 'w-1.5 sm:w-2 bg-white/40 active:bg-white/60'
                 }`}
                 aria-label={`Go to image ${index + 1}`}
               />
