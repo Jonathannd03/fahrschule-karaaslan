@@ -125,7 +125,7 @@ export default function HeroSection({ locale, translations }: HeroSectionProps) 
             {
               icon: Users,
               value: '2000+',
-              label: locale === 'en' ? 'Students' : 'Öğrenci',
+              label: locale === 'de' ? 'Schüler' : locale === 'en' ? 'Students' : 'Öğrenci',
               color: 'from-blue-500 to-blue-600'
             },
             {
@@ -137,13 +137,13 @@ export default function HeroSection({ locale, translations }: HeroSectionProps) 
             {
               icon: Trophy,
               value: '95%',
-              label: locale === 'en' ? 'Success' : 'Başarı',
+              label: locale === 'de' ? 'Erfolg' : locale === 'en' ? 'Success' : 'Başarı',
               color: 'from-green-500 to-green-600'
             },
             {
               icon: Award,
               value: '10+',
-              label: locale === 'en' ? 'Years' : 'Yıl',
+              label: locale === 'de' ? 'Jahre' : locale === 'en' ? 'Years' : 'Yıl',
               color: 'from-purple-500 to-purple-600'
             },
           ].map((stat, index) => {
@@ -174,17 +174,17 @@ export default function HeroSection({ locale, translations }: HeroSectionProps) 
         <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-white/80">
           <div className="flex items-center space-x-2">
             <CheckCircle className="w-5 h-5 text-primary-400" />
-            <span className="font-medium">{locale === 'en' ? 'TÜV Certified' : 'TÜV Sertifikalı'}</span>
+            <span className="font-medium">{locale === 'de' ? 'TÜV Zertifiziert' : locale === 'en' ? 'TÜV Certified' : 'TÜV Sertifikalı'}</span>
           </div>
           <div className="w-1 h-1 bg-white/40 rounded-full hidden sm:block" />
           <div className="flex items-center space-x-2">
             <CheckCircle className="w-5 h-5 text-primary-400" />
-            <span className="font-medium">{locale === 'en' ? 'Modern Vehicles' : 'Modern Araçlar'}</span>
+            <span className="font-medium">{locale === 'de' ? 'Moderne Fahrzeuge' : locale === 'en' ? 'Modern Vehicles' : 'Modern Araçlar'}</span>
           </div>
           <div className="w-1 h-1 bg-white/40 rounded-full hidden sm:block" />
           <div className="flex items-center space-x-2">
             <CheckCircle className="w-5 h-5 text-primary-400" />
-            <span className="font-medium">{locale === 'en' ? 'Experienced Instructors' : 'Deneyimli Eğitmenler'}</span>
+            <span className="font-medium">{locale === 'de' ? 'Erfahrene Lehrer' : locale === 'en' ? 'Experienced Instructors' : 'Deneyimli Eğitmenler'}</span>
           </div>
         </div>
       </div>
