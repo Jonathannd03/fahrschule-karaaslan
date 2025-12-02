@@ -55,8 +55,8 @@ export default function Navigation() {
     <nav className="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-primary-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href={`/${locale}`} className="flex items-center space-x-3">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14">
+          <Link href={`/${locale}`} className="flex items-center space-x-2 sm:space-x-3">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
               <Image
                 src="/images/Karaaslan-logo.png"
                 alt="Fahrschule Karaaslan Logo"
@@ -65,9 +65,9 @@ export default function Navigation() {
                 priority
               />
             </div>
-            <div className="hidden sm:block">
-              <div className="text-xl font-bold text-gray-900">Fahrschule</div>
-              <div className="text-sm text-gray-600">Karaaslan</div>
+            <div>
+              <div className="text-base sm:text-xl font-bold text-gray-900">Fahrschule</div>
+              <div className="text-xs sm:text-sm text-gray-600">Karaaslan</div>
             </div>
           </Link>
 
